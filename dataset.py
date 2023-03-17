@@ -12,6 +12,7 @@ config = load_config()
 #list of datasets
 DATASETS = ["imagenet" , "cifar10", "cifar100", "COCO", "KITTI"]
 
+//storing information of training parameters
 train_map = {
     "cifar10":
         {
