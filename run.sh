@@ -1,0 +1,1 @@
+python3 main.py --model resnet50 --dataset imagenet --batch 128 -p

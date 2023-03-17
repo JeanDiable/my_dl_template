@@ -1,0 +1,6 @@
+data:
+  cifar10: /Users/sammy/Desktop/data/cifar10
+  imagenet: /Users/sammy/Desktop/data/imagenet
+ckpt:
+  cifar10: /Users/sammy/Desktop/data/cifar10-pretrained
+  imagenet: /Users/sammy/Desktop/data/imagenet-pretrained
