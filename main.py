@@ -38,7 +38,7 @@ def train(epoch,net,trainloader):
         log.refresh(batch_idx,len(trainloader),'Train','Loss:{:.3f} | Acc: {:.3f}%'.format(total_loss/(batch_idx+1),100.* correct/total))
     wandb.log({'train_loss':total_loss/(batch_idx+1),'train_acc':100.*correct/total},step=epoch)
 
-//here is the validation set test
+#here is the validation set test
 @torch.no_grad()
 def  valid_test(net,dataloader):
     net.eval()
@@ -57,7 +57,7 @@ def  valid_test(net,dataloader):
         log.refresh(batch_idx,len(dataloader),'Loss:{:.3f} | Acc: {:.3f}%'.format(total_loss/(batch_idx+1),100.* correct/total))
     return 100.* correct / total, total_loss/(batch_idx + 1)
 
-//here is the final test
+#here is the final test
 def test(epoch,net,testloader):
     acc,loss = valid_test(net,testloader)
     wandb.log({'test_clean_loss':loss,'test_clean_acc':acc},step=epoch)

@@ -10,7 +10,7 @@ import archs.cifar_resnet as cifar_resnet
 config = load_config()
 from archs import *
 
-//to get a default architecture
+#to get a default architecture
 def get_architecture(arch:str, dataset:str, pretrained:bool=False,normalize=False)->torch.nn.Module:
     if arch == "resnet18" and dataset == "imagenet":
         model = torch.nn.DataParallel(resnet18(pretrained=ResNet18_Weights.DEFAULT))
@@ -43,13 +43,13 @@ def get_architecture(arch:str, dataset:str, pretrained:bool=False,normalize=Fals
     else:
         return model
 
-//to normalize model
+#to normalize model
 def normalize_model(model,dataset:str) -> torch.nn.Module:
     if "imagenet" in dataset:
         dataset = "imagenet"
     return NormalizedModel(model,normalize_map[dataset])
 
-//the class which is used for normalizing model
+#the class which is used for normalizing model
 class NormalizeModel(nn.Module):
     def __init__(self,net,data_normalize):
         super(NormalizeModel,self).__init__()

@@ -16,7 +16,7 @@ def get_args():
     parser.add_argument('--debug','-nd',action='store_false')
 
     parser.add_argument('--logfile',type=str,default='./log')
-    //TODO set check point path
+    #TODO set check point path
     parser.add_argument('--ckpt',type=str,default='./ckpt.pth')
     parser.add_argument('--gpuid',typr=int,default='0')
     parser.add_argument('--wandb','-w',action='store_true')
